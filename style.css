@@ -1,0 +1,399 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #d32828;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Dinamik Saat Stili */
+#dynamicTime {
+    font-size: 1.5rem;
+    color: #d32828;
+    font-weight: bold;
+    margin-top: 0.5rem;
+    text-align: center;
+    background-color: #fff;
+    padding: 0.5rem;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+}
+
+/*Navigasyon */
+nav {
+    background: #d32828; 
+}
+
+nav ul {
+    display: flex; 
+    list-style: none; 
+    padding: 0; 
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px; 
+}
+
+nav ul li a {
+    color: #fff; 
+    text-decoration: none; 
+    padding: 10px 15px; 
+    transition: background-color 0.3s; 
+}
+
+nav ul li a.active {
+    font-weight: bold; 
+    color: #f8f5f5; 
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); 
+    border-radius: 4px; 
+}
+
+/* Responsive tasarım */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    nav ul li {
+        margin: 10px 0; 
+    }
+}
+
+#intro {
+    padding: 2rem; 
+    text-align: center; 
+    background-color: #e4e4e4; 
+    margin-top: 1rem; 
+    border-radius: 0px; 
+}
+
+.intro-content {
+    display: flex; 
+    align-items: center;
+    text-align: left;
+    padding: 2rem;
+    gap: 20px; 
+}
+
+.intro-content p {
+    font-size: 1.2rem; 
+    font-weight: 400; 
+    line-height: 1.6; 
+    color: #333; 
+}
+
+#intro h2 {
+    font-size: 1.5rem; 
+    font-weight: 1000;
+    text-align: center;
+    color: #d32828;
+}
+
+/* GIF Stili */
+#gifHome {
+    width: 600px; 
+    height: 500px; 
+    border-radius: 8px; 
+    display: block; 
+    margin: 0 auto; 
+}
+
+/* Profil Resmi Stili */
+#profileImageHome {
+    width: 600px; 
+    height: 500px; 
+    border-radius: 8px; 
+    margin-left: 20px; 
+    object-fit: cover; 
+}
+
+/* Liste stili */
+ul {
+    list-style-type: disc; 
+    padding-left: 20px; 
+    font-size: 1.1rem; 
+    color: #444; 
+}
+  
+ul li {
+    padding: 5px 0; 
+}
+  
+ul li a {
+    text-decoration: none; 
+    color: #d32828;
+    transition: color 0.3s ease; 
+}
+  
+ul li a:hover {
+    color: #9c1823; 
+}
+
+
+/**********************************************************************************************************************/
+
+/*ANASAYFA- HAKKIMDA  */
+
+.about-section {
+    display: flex; 
+    align-items: center; 
+    margin: 2rem; 
+    background-color: #ccc; 
+    padding: 1rem;
+    border-radius: 10px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+}
+
+.about-section p {
+    font-size: 1.2rem; 
+    line-height: 1.6; 
+    color: #333; 
+}
+
+.about-section {
+    position: relative; 
+    display: flex; 
+    align-items: flex-start; 
+}
+
+#profileImageAbout {
+    position: absolute; 
+    top: 10px; 
+    left: 10px; 
+    max-width: 300px; 
+    height: auto; 
+    border-radius: 2%; 
+    margin-right: 20px; 
+}
+
+.about-text {
+    margin-left: 350px; 
+    padding-top: 20px; 
+}
+
+/* Daha Fazla Daha Az Gör Butonu*/
+#toggleMore {
+    background-color: #d32828;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#toggleMore:hover {
+    background-color: #b21f1f;
+    transform: scale(1.05);
+}
+
+#toggleMore:active {
+    background-color: #9c1616;
+    transform: scale(0.95);
+}
+
+#moreInfo {
+    display: none;
+    margin-top: 20px;
+}
+
+#moreInfo.show {
+    display: block; 
+}
+
+
+/**********************************************************************************************************************/
+
+/* ANASAYFA- PROJELER   */
+
+.project-list {
+    display: flex;
+    justify-content: center; 
+    align-items: flex-start; 
+    flex-wrap: wrap; 
+    gap: 20px; 
+    padding: 20px; 
+    text-align: center; 
+    min-height: 100vh; 
+}
+
+.project-item {
+    background-color: #f2f2f2;
+    border: 1px solid #d32828;
+    border-radius: 8px;
+    width: calc(30% - 20px); 
+    max-width: 300px; 
+    height: 700px; 
+    padding: 15px;
+    margin: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+}
+
+.project-item:hover {
+    transform: scale(1.05);
+}
+
+.project-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: left; 
+    margin-bottom: 20px; 
+}
+
+.filter-button {
+    background-color: #d32828;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 0 10px; 
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.filter-button:hover {
+    background-color:#811414;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/**********************************************************************************************************************/
+
+/* Iletişim Formu */
+
+form {
+    background-color: #ffffff; 
+    padding: 2rem; 
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    max-width: 500px; 
+    margin: 2rem 0 2rem 2rem; 
+}
+
+label {
+    display: block; 
+    margin-bottom: 0.5rem; 
+    font-weight: bold; 
+    color: #d32828; 
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%; 
+    padding: 5px; 
+    margin-bottom: 0.5rem; 
+    border: 1px solid #e4e4e4; 
+    border-radius: 5px; 
+    font-size: 10px; 
+    transition: border-color 0.3s ease; 
+}
+
+textarea {
+    height: 100px; 
+    resize: none; 
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #007bff; 
+    outline: none; 
+}
+
+button {
+    background-color: #007bff; 
+    color: white; 
+    padding: 5px 10px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-size: 10px; 
+    transition: background-color 0.3s ease; 
+}
+
+button:hover {
+    background-color: #0056b3; 
+}
+
+#formFeedback {
+    margin-top: 0.5rem; 
+    font-weight: bold; 
+    color: #d9534f; 
+}
+
+/**********************************************************************************************************************/
+
+/* Footer */
+.footer {
+    background-color: #d32828; 
+    color: #fff; 
+    text-align: center; 
+    padding: 0.5rem 0; 
+    position: relative; 
+}
+
+.footer-content {
+    max-width: 5000px;
+    margin: 0 auto; 
+    padding: 1rem; 
+    background-color: #d32828; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+}
+
+.footer .social-links {
+    margin-bottom: 1rem; 
+}
+
+.footer .social-links a {
+    color: #fff; 
+    margin: 0 10px; 
+    text-decoration: none; 
+    transition: color 0.3s ease; 
+}
+
+.footer .social-links a:hover {
+    color: #0c0c0c; 
+}
+
+.footer .footer-info p {
+    margin: 0.5rem 0; 
+    color: #fff; 
+}
+
+.footer .footer-info a {
+    color: #fff; 
+    text-decoration: underline; 
+    transition: color 0.3s ease; 
+}
+
+.footer .footer-info a:hover {
+    color: #0c0c0c; 
+}

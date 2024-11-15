@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anasayfa | HILAL KUTLU</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Hoş Geldiniz!</h1>
+        <p id="dynamicTime"></p> 
+        <nav>
+          <ul>
+            <li><a href="index.html">Anasayfa</a></li>
+            <li><a href="about.html">Hakkımda</a></li>
+            <li><a href="projects.html">Projelerim</a></li>
+          </ul>
+        </nav>
+    </header>
+
+
+  <main>
+      <section id="intro">
+          <h2>HAYAL ET, TASARLA, YAŞA!</h2>
+          <div class="intro-content">
+            <img src="home1.gif" id="gifHome">
+              <p>Her şey bir hayalle başlar!<br>
+                  <br>
+                  İster küçük bir fikir, ister büyük bir vizyon olsun, hayal etmek yaratmanın ilk adımıdır. 
+                  Hayal gücünüz size sınırları zorlamanız, dünyaya yeni bir bakış açısıyla yaklaşmanız ve benzersiz çözümler üretmeniz için ilham verir.<br>
+                  <br>
+                  Hayalleriniz sadece düşünce düzeyinde kalmasın; onları somutlaştırmak için harekete geçin. 
+                  Yenilikçi düşüncelerinizi tasarımın gücüyle bir araya getirerek, sadece hayalini kurduğunuz değil, aynı zamanda yaşatmak istediğiniz projelere dönüştürün. 
+                  Tasarım, fikirlerinizi ifade etmenin en güçlü yollarından biridir ve yaratıcılığınızın dışa vurulmuş hâlidir.<br>
+                  <br>
+                  Emeğinizin sonucunda ortaya çıkan her proje, her tasarım, yaşanacak bir deneyim sunar. 
+                  Her adımda, sadece bir proje değil, kendi hikayenizi de inşa edersiniz. 
+                  Yaşadığınız her başarı, her dönüm noktası, sizi bir sonraki hayaliniz için güçlendirir.<br>
+                  <br>
+                  Hayal etmenin, tasarım yapmanın ve yaşamın iç içe geçtiği bu yolculukta, sizinle birlikte olmaktan mutluluk duyuyoruz.<br>
+                  <br>
+                  Hayal edin, tasarlayın ve yarattığınız dünyayı yaşayın!
+              </p>
+          </div>
+      </section>
+
+    <section id="intro">
+      <h2>HAKKIMDA</h2>
+      <div class="intro-content"> 
+        <p>Merhaba, Ben Bilgisayar Mühendisliği öğrencisiyim.
+          Teknolojiye olan ilgim, her geçen gün yenilikleri takip etme tutkumla birleşiyor ve bu beni dijital dünyada yaratıcı çözümler üretmeye yönlendiriyor.<br>
+          <br>
+          Web tasarımı, estetik ve işlevselliği bir araya getirmenin heyecan verici bir yoludur. 
+          HTML, CSS ve JavaScript gibi temel teknolojilerle başladım, zamanla daha ileri düzey araçları ve tasarım prensiplerini öğrenerek projelerimi geliştirdim. 
+          Her projede, kullanıcı dostu ve etkileyici tasarımlar yaratmaya odaklanarak web dünyasında iz bırakmak istiyorum.<br>
+          <br>
+          Hedefim, teknoloji ve tasarımı birleştirerek hem görsel hem de fonksiyonel olarak mükemmel web siteleri tasarlamak. 
+          Sürekli öğrenmeye, gelişmeye ve yenilikçi projelere imza atmaya devam ediyorum.</p>
+        <img src="pp.jpg" alt="Hilal Kutlu" id="profileImageHome">
+      </div>
+    </section>
+
+    <section id="intro">
+      <h2>PROJELER</h2>
+      <div class="intro-content"> 
+        <img src="home2.gif" id="gifHome">
+        <p>Teknolojiye olan ilgim beni dijital dünyada yaratıcı projeler geliştirmeye yönlendiriyor.<br>
+          <br>
+          Web tasarımı ile ilgilenmenin yanı sıra, TÜBİTAK ve TEKNOFEST gibi prestijli programlarda çeşitli projelere katıldım. 
+          Geliştirdiğim projeler, teknoloji ve mühendisliği birleştirerek gerçek dünyada çözüm üretmeye odaklanıyor. 
+          Bu projeler arasında güneş enerjili su arıtma sistemi, günlük yaşamda saklama alanı olarak kullanılan akıllı dolap sistemi, 
+          sensörlü yangın söndürme sistemi ve topografik verimli toprak haritası sunan bir web sitesi yer alıyor.<br>
+          <br>
+          Bu projeler, hem mühendislik hem de tasarım alanlarında bana değerli deneyimler kazandırdı ve problem çözme becerilerimi geliştirdi. 
+          Her projede, hem teknolojiyi hem de kullanıcı ihtiyaçlarını dikkate alarak verimli ve sürdürülebilir çözümler üretmeye odaklandım.
+          <p>
+          <ul>
+            <li><a href="projects.html">Güneş Enerjili Akıllı Su Arıtma Sistemi</a></li>
+            <li><a href="projects.html">Akıllı Depolama Sistemi</a></li>
+            <li><a href="projects.html">Sensörlü Acil Müdahale ve Yangın Söndürme Sistemi</a></li>
+            <li><a href="projects.html">Verimli Toprak ve İklim Haritası</a></li>
+         </ul>
+      </div>
+    </section>
+
+</main>
+
+<!-- Iletişim Formu -->
+  <section>
+    <h2> | İletişim</h2>
+    <form id="contactForm">
+      <label for="name">İsim:</label>
+      <input type="text" id="name" name="name" required>
+      <label for="email">E-posta:</label>
+      <input type="email" id="email" name="email" required>
+      <label for="message">Mesaj:</label>
+      <textarea id="message" name="message" required></textarea>
+      <button type="submit">Gönder</button>
+      <p id="formFeedback"></p>
+    </form>
+  </section>
+
+<!-- Footer -->
+<footer id="mainFooter" class="footer">
+    <div class="footer-content">
+      <div class="social-links">
+        <a href="https://www.linkedin.com" target="_blank">LinkedIn</a> |
+        <a href="https://www.github.com" target="_blank">GitHub</a> |
+        <a href="https://www.twitter.com" target="_blank">Twitter</a>
+      </div>
+      <div class="footer-info">
+        <p>&copy; 2024 Hilal Kutlu. All rights reserved.</p>
+        <p>Contact: <a href="mailto:hilal.kutlu.tr@gmail.com">hilal.kutlu.tr@gmail.com</a></p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
