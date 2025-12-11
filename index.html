@@ -3,121 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anasayfa | HILAL KUTLU</title>
+    <title>Anasayfa | HILAL KUTLU - Yazılım Geliştirici</title>
+    <!-- Google Fonts: Poppins (Başlık) & Inter (Metin) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script defer src="script.js"></script>
 </head>
 
 <body>
-
     <header>
-        <h1>Hoş Geldiniz!</h1>
-        <p id="dynamicTime"></p> 
+        <div class="logo">H.K.</div>
         <nav>
           <ul>
             <li><a href="index.html">Anasayfa</a></li>
             <li><a href="about.html">Hakkımda</a></li>
             <li><a href="projects.html">Projelerim</a></li>
+            <li><a href="#contact-section" class="cta-nav">İletişim</a></li>
           </ul>
         </nav>
     </header>
 
+    <main>
+        <!-- HERO SECTION: Profesyonel Karşılama ve Hızlı Tanıtım -->
+        <section id="hero-section" class="hero-section">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h2 class="pre-title">Bilgisayar Mühendisi Adayı</h2>
+                    <h1 class="main-title">Hilal Kutlu: <span class="accent-text">Hayal Et, Tasarla, Kodla!</span></h1>
+                    <p class="subtitle">Kullanıcı odaklı web çözümlerine ve yenilikçi projelere tutkuyla bağlı bir yazılım geliştiricisiyim. Dijital dünyada fark yaratmayı hedefliyorum.</p>
+                    <div class="hero-actions">
+                        <a href="projects.html" class="btn btn-primary">Projelerimi Gör</a>
+                        <a href="about.html" class="btn btn-secondary">Daha Fazla Bilgi</a>
+                    </div>
+                </div>
+                <img src="pp.jpg" alt="Hilal Kutlu Profesyonel Profil Resmi" class="hero-image">
+            </div>
+        </section>
 
-  <main>
-      <section id="intro">
-          <h2>HAYAL ET, TASARLA, YAŞA!</h2>
-          <div class="intro-content">
-            <img src="home1.gif" id="gifHome">
-              <p>Her şey bir hayalle başlar!<br>
-                  <br>
-                  İster küçük bir fikir, ister büyük bir vizyon olsun, hayal etmek yaratmanın ilk adımıdır. 
-                  Hayal gücünüz size sınırları zorlamanız, dünyaya yeni bir bakış açısıyla yaklaşmanız ve benzersiz çözümler üretmeniz için ilham verir.<br>
-                  <br>
-                  Hayalleriniz sadece düşünce düzeyinde kalmasın; onları somutlaştırmak için harekete geçin. 
-                  Yenilikçi düşüncelerinizi tasarımın gücüyle bir araya getirerek, sadece hayalini kurduğunuz değil, aynı zamanda yaşatmak istediğiniz projelere dönüştürün. 
-                  Tasarım, fikirlerinizi ifade etmenin en güçlü yollarından biridir ve yaratıcılığınızın dışa vurulmuş hâlidir.<br>
-                  <br>
-                  Emeğinizin sonucunda ortaya çıkan her proje, her tasarım, yaşanacak bir deneyim sunar. 
-                  Her adımda, sadece bir proje değil, kendi hikayenizi de inşa edersiniz. 
-                  Yaşadığınız her başarı, her dönüm noktası, sizi bir sonraki hayaliniz için güçlendirir.<br>
-                  <br>
-                  Hayal etmenin, tasarım yapmanın ve yaşamın iç içe geçtiği bu yolculukta, sizinle birlikte olmaktan mutluluk duyuyoruz.<br>
-                  <br>
-                  Hayal edin, tasarlayın ve yarattığınız dünyayı yaşayın!
-              </p>
-          </div>
-      </section>
+        <!-- YETENEKLER/STACK BÖLÜMÜ: Hızlı Teknik Özet -->
+        <section id="skills-section" class="section-container">
+            <h2>Kullanılan Teknolojiler</h2>
+            <div class="skills-grid">
+                <div class="skill-item">HTML5 & CSS3</div>
+                <div class="skill-item">JavaScript</div>
+                <div class="skill-item">Web Tasarımı (UI/UX)</div>
+                <div class="skill-item">Git/GitHub</div>
+                <div class="skill-item">Problem Çözme</div>
+                <div class="skill-item">Takım Çalışması</div>
+            </div>
+        </section>
 
-    <section id="intro">
-      <h2>HAKKIMDA</h2>
-      <div class="intro-content"> 
-        <p>Merhaba, Ben Bilgisayar Mühendisliği öğrencisiyim.
-          Teknolojiye olan ilgim, her geçen gün yenilikleri takip etme tutkumla birleşiyor ve bu beni dijital dünyada yaratıcı çözümler üretmeye yönlendiriyor.<br>
-          <br>
-          Web tasarımı, estetik ve işlevselliği bir araya getirmenin heyecan verici bir yoludur. 
-          HTML, CSS ve JavaScript gibi temel teknolojilerle başladım, zamanla daha ileri düzey araçları ve tasarım prensiplerini öğrenerek projelerimi geliştirdim. 
-          Her projede, kullanıcı dostu ve etkileyici tasarımlar yaratmaya odaklanarak web dünyasında iz bırakmak istiyorum.<br>
-          <br>
-          Hedefim, teknoloji ve tasarımı birleştirerek hem görsel hem de fonksiyonel olarak mükemmel web siteleri tasarlamak. 
-          Sürekli öğrenmeye, gelişmeye ve yenilikçi projelere imza atmaya devam ediyorum.</p>
-        <img src="pp.jpg" alt="Hilal Kutlu" id="profileImageHome">
-      </div>
-    </section>
+        <!-- PROJELERE HIZLI BAKIŞ -->
+        <section id="project-glance" class="section-container">
+            <h2>Öne Çıkan Projelerim</h2>
+            <div class="projects-glance-grid">
+                <div class="project-glance-item">
+                    <h3>Güneş Enerjili Su Arıtma</h3>
+                    <p>Sürdürülebilir, yenilenebilir enerjiyle çalışan su arıtma sistemi projesi.</p>
+                    <a href="projects.html" class="project-link">Detay</a>
+                </div>
+            </div>
+            <div class="text-center">
+                <a href="projects.html" class="btn btn-secondary mt-large">Tüm Projeleri Görüntüle</a>
+            </div>
+        </section>
 
-    <section id="intro">
-      <h2>PROJELER</h2>
-      <div class="intro-content"> 
-        <img src="home2.gif" id="gifHome">
-        <p>Teknolojiye olan ilgim beni dijital dünyada yaratıcı projeler geliştirmeye yönlendiriyor.<br>
-          <br>
-          Web tasarımı ile ilgilenmenin yanı sıra, TÜBİTAK ve TEKNOFEST gibi prestijli programlarda çeşitli projelere katıldım. 
-          Geliştirdiğim projeler, teknoloji ve mühendisliği birleştirerek gerçek dünyada çözüm üretmeye odaklanıyor. 
-          Bu projeler arasında güneş enerjili su arıtma sistemi, günlük yaşamda saklama alanı olarak kullanılan akıllı dolap sistemi, 
-          sensörlü yangın söndürme sistemi ve topografik verimli toprak haritası sunan bir web sitesi yer alıyor.<br>
-          <br>
-          Bu projeler, hem mühendislik hem de tasarım alanlarında bana değerli deneyimler kazandırdı ve problem çözme becerilerimi geliştirdi. 
-          Her projede, hem teknolojiyi hem de kullanıcı ihtiyaçlarını dikkate alarak verimli ve sürdürülebilir çözümler üretmeye odaklandım.
-          <p>
-          <ul>
-            <li><a href="projects.html">Güneş Enerjili Akıllı Su Arıtma Sistemi</a></li>
-            <li><a href="projects.html">Akıllı Depolama Sistemi</a></li>
-            <li><a href="projects.html">Sensörlü Acil Müdahale ve Yangın Söndürme Sistemi</a></li>
-            <li><a href="projects.html">Verimli Toprak ve İklim Haritası</a></li>
-         </ul>
-      </div>
-    </section>
+        <!-- İletişim Formu -->
+        <section id="contact-section" class="section-container">
+            <h2>İletişime Geçin</h2>
+            <form id="contactForm" class="contact-form">
+                <div class="form-group">
+                    <label for="name">İsim:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-posta:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group full-width">
+                    <label for="message">Mesajınız:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary full-width">Mesajı Gönder</button>
+                <p id="formFeedback" class="feedback"></p>
+            </form>
+        </section>
+    </main>
 
-</main>
-
-<!-- Iletişim Formu -->
-  <section>
-    <h2> | İletişim</h2>
-    <form id="contactForm">
-      <label for="name">İsim:</label>
-      <input type="text" id="name" name="name" required>
-      <label for="email">E-posta:</label>
-      <input type="email" id="email" name="email" required>
-      <label for="message">Mesaj:</label>
-      <textarea id="message" name="message" required></textarea>
-      <button type="submit">Gönder</button>
-      <p id="formFeedback"></p>
-    </form>
-  </section>
-
-<!-- Footer -->
-<footer id="mainFooter" class="footer">
-    <div class="footer-content">
-      <div class="social-links">
-        <a href="https://www.linkedin.com" target="_blank">LinkedIn</a> |
-        <a href="https://www.github.com" target="_blank">GitHub</a> |
-        <a href="https://www.twitter.com" target="_blank">Twitter</a>
-      </div>
-      <div class="footer-info">
-        <p>&copy; 2024 Hilal Kutlu. All rights reserved.</p>
-        <p>Contact: <a href="mailto:hilal.kutlu.tr@gmail.com">hilal.kutlu.tr@gmail.com</a></p>
-      </div>
-    </div>
-  </footer>
-
+    <footer id="mainFooter"></footer>
 </body>
 </html>
