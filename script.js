@@ -56,9 +56,7 @@ function setupToggleMoreButton() {
 function loadFooter(footerId) {
     const footerElement = document.getElementById(footerId);
     if (footerElement) {
-        // fetch('footer.html') kullanmak yerine, projenin tamamen çalışabilmesi için 
-        // HTML'i doğrudan JavaScript içinde tanımlayalım.
-        // Gerçek bir projede, footer.html'i fetch ile yüklemek daha iyidir.
+        // Yeni footer içeriği: Twitter kaldırıldı, sadece LinkedIn ve GitHub bırakıldı.
         const footerContent = `
             <div class="footer-content">
                 <div class="social-links">

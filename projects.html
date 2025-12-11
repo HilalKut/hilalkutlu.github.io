@@ -25,19 +25,29 @@
         <section class="section-container">
             <h2>Mühendislik & Yazılım Projeleri</h2>
             
-            <!-- Projeler, modern Card yapısında sunulacak -->
-            <div id="projectList" class="projects-grid">
+            <div id="projectList" class="projects-grid" style="grid-template-columns: 1fr;"> <!-- Tek sütunlu görünüm için -->
                 
-                <div class="project-card">
+                <div class="project-card" id="proje1">
                     <img src="proje1.png" alt="Güneş Enerjili Akıllı Su Arıtma Sistemi" class="project-image" />
                     <div class="project-info">
-                        <h3>Güneş Enerjili Akıllı Su Arıtma Sistemi <span class="tag">TÜBİTAK</span></h3>
-                        <p>Yenilenebilir enerji (güneş) kullanarak su kıtlığını önlemeyi hedefleyen, düşük maliyetli ve sürdürülebilir su arıtma çözümüdür. Toplulukların içme suyuna erişimini sağlamaya odaklanılmıştır.</p>
-                        <a href="#" class="btn btn-secondary">Proje Detaylarını İncele</a>
+                        <h3>Uzaktan Kontrol ile Güneş Enerjili Su Arıtma Sistemi<span class="tag">TÜBİTAK</span></h3>
+                        <div class="tech-stack">
+                            <span class="tech-tag">IOT</span>
+                            <span class="tech-tag">Arduino</span>
+                            <span class="tech-tag">Gömülü Sistem</span>
+                        </div>
+                        <p>Yenilenebilir enerji (güneş) kullanarak su kıtlığını önlemeyi hedefleyen, düşük maliyetli ve sürdürülebilir su arıtma çözümüdür. Toplulukların içme suyuna erişimini sağlamaya odaklanılmıştır. **Proje Rolüm: Yazılımcı Gönüllüsü**</p>
+                        <a href="#" class="btn btn-secondary">Daha Fazla Bilgi Al</a>
                     </div>
                 </div>
                 
             </div>
+        </section>
+        <!-- İletişim Formu Bağlantısı (Projects Sayfasına da eklendi) -->
+        <section id="contact-section" class="section-container contact-prompt">
+            <h2 class="text-center">İşbirliği İçin Hazır mısınız?</h2>
+            <p class="text-center">Yeni projelerinizde teknolojiyi ve tasarımı birleştirmek için benimle iletişime geçin.</p>
+            <div class="text-center"><a href="index.html#contact-section" class="btn btn-primary">Hemen İletişime Geç</a></div>
         </section>
     </main>
     <footer id="mainFooter"></footer>

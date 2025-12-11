@@ -446,3 +446,97 @@ textarea {
     /* Footer */
     .footer-content { flex-direction: column; text-align: center; gap: 15px; }
 }
+
+
+/*--------------------------------------------------------------------------------*/
+/* YENİ EKLENEN STİLLER */
+/*--------------------------------------------------------------------------------*/
+
+/* YETENEK VE DENEYİM SEVİYESİ */
+.skill-item {
+    position: relative;
+}
+.skill-item::after {
+    content: attr(data-level);
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    padding: 2px 8px;
+    border-radius: 50px;
+    z-index: 10;
+    transition: all 0.3s;
+    opacity: 0.8;
+}
+.skill-item:hover::after {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* HAKKIMDA - ZAMAN ÇİZELGESİ (TIMELINE) */
+.timeline-container {
+    margin-top: 3rem;
+    padding-left: 20px;
+    border-left: 3px solid var(--secondary-accent);
+}
+.timeline-container h3 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+}
+.timeline-item {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 25px;
+}
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -11px;
+    top: 5px;
+    width: 15px;
+    height: 15px;
+    background-color: var(--accent-color);
+    border-radius: 50%;
+    border: 3px solid var(--light-bg);
+}
+.timeline-item h4 {
+    margin: 0 0 5px 0;
+    color: var(--dark-text);
+    font-size: 1.2rem;
+}
+.timeline-item p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--secondary-accent);
+}
+.timeline-tag {
+    font-size: 0.7rem;
+    font-weight: 600;
+    background-color: var(--primary-color);
+    color: var(--light-bg);
+    padding: 2px 6px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-top: 5px;
+}
+
+/* PROJELER - TEKNOLOJİ ETİKETLERİ */
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+.tech-tag {
+    font-size: 0.75rem;
+    font-weight: 500;
+    background-color: var(--mid-bg);
+    color: var(--primary-color);
+    padding: 4px 10px;
+    border-radius: 50px;
+    border: 1px solid #ddd;
+}
