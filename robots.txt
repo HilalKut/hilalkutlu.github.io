@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hilalkut.github.io/hilalkutlu.github.io/sitemap.xml

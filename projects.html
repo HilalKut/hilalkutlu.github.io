@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Hilal Kutlu'nun mühendislik ve yazılım projeleri.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Projelerim | Hilal Kutlu">
+    <meta property="og:description" content="Enerji, IoT ve yazılım odaklı proje çalışmaları.">
+    <meta property="og:url" content="https://hilalkut.github.io/hilalkutlu.github.io/projects.html">
+    <meta property="og:image" content="https://hilalkut.github.io/hilalkutlu.github.io/proje1.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://hilalkut.github.io/hilalkutlu.github.io/projects.html">
     <title>Projelerim | Hilal Kutlu</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,6 +19,8 @@
     <script defer src="script.js"></script>
 </head>
 <body class="page-projects">
+    <a href="#main-content" class="skip-link">Ana içeriğe geç</a>
+
     <header class="site-header">
         <div class="header-inner">
             <a href="index.html" class="logo" aria-label="Hilal Kutlu Anasayfa">H.K.</a>
@@ -31,7 +40,7 @@
         </div>
     </header>
 
-    <main>
+    <main id="main-content">
         <section class="section-container reveal">
             <div class="section-head">
                 <h2>Mühendislik ve Yazılım Projeleri</h2>
@@ -40,7 +49,7 @@
 
             <div id="projectList" class="projects-grid single-column">
                 <article class="project-card" id="proje1">
-                    <img src="proje1.png" alt="Güneş enerjili akıllı su arıtma sistemi" class="project-image">
+                    <img src="proje1.png" alt="Güneş enerjili akıllı su arıtma sistemi" class="project-image" loading="lazy" decoding="async" width="1024" height="683">
                     <div class="project-info">
                         <h3>Uzaktan Kontrol ile Güneş Enerjili Su Arıtma Sistemi <span class="tag">TÜBİTAK</span></h3>
                         <div class="tech-stack">
@@ -49,7 +58,15 @@
                             <span class="tech-tag">Gömülü Sistem</span>
                         </div>
                         <p>Yenilenebilir enerji kullanarak su kıtlığına sürdürülebilir çözüm üretmeyi hedefleyen bir sistem. Düşük maliyet ve erişilebilirlik odaklı geliştirildi. Projedeki rolüm yazılım geliştirme ve teknik uygulama desteğiydi.</p>
-                        <a href="index.html#contact-section" class="btn btn-secondary">Bu Projeyi Konuşalım</a>
+                        <dl class="project-meta">
+                            <div><dt>Rol</dt><dd>Yazılım Geliştirici Gönüllü</dd></div>
+                            <div><dt>Süre</dt><dd>2023 - 2024</dd></div>
+                            <div><dt>Odak</dt><dd>Uzak kontrol ve saha uygulanabilirliği</dd></div>
+                        </dl>
+                        <div class="project-actions">
+                            <a href="index.html#contact-section" class="btn btn-secondary">Bu Projeyi Konuşalım</a>
+                            <a href="mailto:hilal.kutlu.tr@gmail.com?subject=Proje%20Detay%20Talebi" class="btn btn-ghost">Detay Talep Et</a>
+                        </div>
                     </div>
                 </article>
             </div>
@@ -62,6 +79,7 @@
         </section>
     </main>
 
+    <a href="index.html#contact-section" class="floating-cta" aria-label="İletişim bölümüne git">İletişim</a>
     <footer id="mainFooter"></footer>
 </body>
 </html>

@@ -4,14 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Hilal Kutlu'nun yazılım geliştirme, web tasarım ve mühendislik projeleri portfolyosu.">
+    <meta name="keywords" content="Hilal Kutlu, yazılım geliştirici, web tasarım, portfolyo, bilgisayar mühendisliği">
+    <meta name="author" content="Hilal Kutlu">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Hilal Kutlu | Yazılım ve Mühendislik Portfolyosu">
+    <meta property="og:description" content="Kullanıcı odaklı web çözümleri ve mühendislik projeleri.">
+    <meta property="og:url" content="https://hilalkut.github.io/hilalkutlu.github.io/">
+    <meta property="og:image" content="https://hilalkut.github.io/hilalkutlu.github.io/pp.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Hilal Kutlu | Yazılım ve Mühendislik Portfolyosu">
+    <meta name="twitter:description" content="Kullanıcı odaklı web çözümleri ve mühendislik projeleri.">
+    <meta name="twitter:image" content="https://hilalkut.github.io/hilalkutlu.github.io/pp.jpg">
+    <link rel="canonical" href="https://hilalkut.github.io/hilalkutlu.github.io/">
     <title>Anasayfa | Hilal Kutlu</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Hilal Kutlu",
+      "url": "https://hilalkut.github.io/hilalkutlu.github.io/",
+      "jobTitle": "Bilgisayar Mühendisliği Öğrencisi",
+      "email": "mailto:hilal.kutlu.tr@gmail.com",
+      "sameAs": [
+        "https://www.linkedin.com/in/hilal-kutlu-672376284/",
+        "https://github.com/hilalkutlu"
+      ]
+    }
+    </script>
 </head>
 <body class="page-home">
+    <a href="#main-content" class="skip-link">Ana içeriğe geç</a>
+
     <header class="site-header">
         <div class="header-inner">
             <a href="index.html" class="logo" aria-label="Hilal Kutlu Anasayfa">H.K.</a>
@@ -31,7 +59,7 @@
         </div>
     </header>
 
-    <main>
+    <main id="main-content">
         <section id="hero-section" class="hero-section reveal">
             <div class="hero-content">
                 <div class="hero-text">
@@ -44,8 +72,29 @@
                     </div>
                 </div>
                 <div class="hero-image-wrap">
-                    <img src="pp.jpg" alt="Hilal Kutlu profil fotoğrafı" class="hero-image">
+                    <img src="pp.jpg" alt="Hilal Kutlu profil fotoğrafı" class="hero-image" width="280" height="280" fetchpriority="high" decoding="async">
                 </div>
+            </div>
+        </section>
+
+        <section class="section-container reveal">
+            <div class="section-head">
+                <h2>Neden Benimle Çalışmalısınız?</h2>
+                <p>Projelerde hız, kalite ve iletişimi birlikte koruyan bir çalışma yaklaşımı.</p>
+            </div>
+            <div class="value-grid">
+                <article class="value-card">
+                    <h3>Ürün Odaklılık</h3>
+                    <p>Sadece kod değil, kullanıcıya gerçek değer üreten çözüm geliştiririm.</p>
+                </article>
+                <article class="value-card">
+                    <h3>Teknik Disiplin</h3>
+                    <p>Bakımı kolay, okunabilir ve sürdürülebilir bir kod standardı uygularım.</p>
+                </article>
+                <article class="value-card">
+                    <h3>Net İletişim</h3>
+                    <p>Proje sürecini adım adım görünür tutar, hızlı geri bildirimle ilerlerim.</p>
+                </article>
             </div>
         </section>
 
@@ -102,10 +151,12 @@
                 </div>
                 <button type="submit" class="btn btn-primary full-width">Mesajı Gönder</button>
                 <p id="formFeedback" class="feedback" aria-live="polite"></p>
+                <p class="micro-note full-width">Alternatif olarak <a href="mailto:hilal.kutlu.tr@gmail.com">hilal.kutlu.tr@gmail.com</a> adresine e-posta gönderebilirsiniz.</p>
             </form>
         </section>
     </main>
 
+    <a href="#contact-section" class="floating-cta" aria-label="İletişim bölümüne git">İletişim</a>
     <footer id="mainFooter"></footer>
 </body>
 </html>

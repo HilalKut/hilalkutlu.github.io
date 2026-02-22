@@ -14,8 +14,10 @@ function setActiveNavLink() {
         const linkPage = href.split("#")[0];
         if (linkPage === currentPage || (currentPage === "" && linkPage === "index.html")) {
             link.classList.add("active");
+            link.setAttribute("aria-current", "page");
         } else {
             link.classList.remove("active");
+            link.removeAttribute("aria-current");
         }
     });
 }
@@ -28,16 +30,34 @@ function setupMobileMenu() {
         return;
     }
 
+    const closeMenu = () => {
+        document.body.classList.remove("menu-open");
+        menuButton.setAttribute("aria-expanded", "false");
+    };
+
     menuButton.addEventListener("click", () => {
         const isOpen = document.body.classList.toggle("menu-open");
         menuButton.setAttribute("aria-expanded", String(isOpen));
     });
 
     nav.querySelectorAll("a").forEach((link) => {
-        link.addEventListener("click", () => {
-            document.body.classList.remove("menu-open");
-            menuButton.setAttribute("aria-expanded", "false");
-        });
+        link.addEventListener("click", closeMenu);
+    });
+
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+            closeMenu();
+        }
+    });
+
+    document.addEventListener("click", (event) => {
+        if (!document.body.classList.contains("menu-open")) {
+            return;
+        }
+
+        if (!nav.contains(event.target) && !menuButton.contains(event.target)) {
+            closeMenu();
+        }
     });
 }
 
@@ -115,7 +135,8 @@ function loadFooter(footerId) {
 function setupRevealAnimations() {
     const revealItems = document.querySelectorAll(".reveal");
 
-    if (!revealItems.length) {
+    if (!revealItems.length || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        revealItems.forEach((item) => item.classList.add("is-visible"));
         return;
     }
 
