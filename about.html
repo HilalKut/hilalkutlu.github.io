@@ -1,84 +1,99 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hakkımda | HILAL KUTLU</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <script defer src="script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hilal Kutlu hakkında eğitim, deneyim, kariyer hedefleri ve iletişim bilgileri.">
+    <title>Hakkımda | Hilal Kutlu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
 </head>
-<body>
-    <header>
-        <div class="logo">H.K.</div>
-        <nav>
-          <ul>
-            <li><a href="index.html">Anasayfa</a></li>
-            <li><a href="about.html">Hakkımda</a></li>
-            <li><a href="projects.html">Projelerim</a></li>
-            <li><a href="#contact-section" class="cta-nav">İletişim</a></li>
-          </ul>
-        </nav>
+<body class="page-about">
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="index.html" class="logo" aria-label="Hilal Kutlu Anasayfa">H.K.</a>
+            <button class="menu-toggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Menüyü Aç/Kapat">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav id="primaryNav" class="site-nav">
+                <ul>
+                    <li><a href="index.html">Anasayfa</a></li>
+                    <li><a href="about.html">Hakkımda</a></li>
+                    <li><a href="projects.html">Projelerim</a></li>
+                    <li><a href="index.html#contact-section" class="cta-nav">İletişim</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
+
     <main>
-        <section class="about-section section-container">
-            <h2>Hakkımda</h2>
+        <section class="about-section section-container reveal">
+            <div class="section-head">
+                <h2>Hakkımda</h2>
+                <p>Teknoloji ve tasarımı bir araya getiren, öğrenmeye açık bir mühendislik yaklaşımı.</p>
+            </div>
+
             <div class="about-content">
                 <div class="about-text-content">
-                    <p class="lead-paragraph">Merhaba, ben Hilal KUTLU. Bilgisayar Mühendisliği **4. sınıf** öğrencisi ve web tasarımına tutkulu bir yaratıcıyım. Teknoloji, estetik ve problem çözme becerilerimi birleştirerek, kullanıcı deneyimini en üst seviyeye çıkaran dijital projeler üretmeyi hedefliyorum.</p>
-                    <p>Tasarım ve dizayn işlerine olan ilgimle birlikte, bir mühendis olarak mantıklı ve fonksiyonel çözümler üretmeye odaklanıyorum. Sürekli araştırma yapmayı, teknolojik gelişmeleri takip etmeyi ve öğrendiğim yeni bilgileri projelere dahil etmeyi seviyorum. TÜBİTAK ve TEKNOFEST gibi önemli projelerde edindiğim deneyimler, takım çalışması ve liderlik yeteneklerimi güçlendirdi.</p>
-                    
-                    <!-- EĞİTİM VE DENEYİM KARTLARI (Yeni Yapı) -->
+                    <p class="lead-paragraph">Merhaba, ben Hilal Kutlu. Bilgisayar Mühendisliği 4. sınıf öğrencisiyim. Kullanıcı deneyimi ve teknik doğruluk arasında güçlü bir denge kuran dijital ürünler geliştirmeye odaklanıyorum.</p>
+                    <p>Tasarım tarafındaki ilgimi mühendislik bakışıyla birleştirerek hem estetik hem de sürdürülebilir çözümler üretmeyi önceliklendiriyorum. TÜBİTAK ve TEKNOFEST deneyimlerim, takım çalışması ve proje disiplini açısından güçlü bir temel sağladı.</p>
+
                     <div class="timeline-container">
                         <h3>Eğitim ve Deneyim</h3>
                         <div class="timeline-item">
                             <h4>Bilgisayar Mühendisliği (Lisans)</h4>
-                            <p><strong>RTEU</strong> | 2021 - Günümüz (4. Sınıf)</p>
+                            <p><strong>RTEU</strong> | 2021 - Günümüz</p>
                             <span class="timeline-tag">Öğrenim</span>
                         </div>
                         <div class="timeline-item">
                             <h4>Proje Katılımcısı</h4>
-                            <p><strong>TÜBİTAK 2208A 2023/2 Projesi</strong> | Uzaktan Kontrol ile Güneş Enerjili Su Arıtma Sistemi</p>
+                            <p><strong>TÜBİTAK 2208A 2023/2</strong> | Uzaktan Kontrol ile Güneş Enerjili Su Arıtma Sistemi</p>
                             <span class="timeline-tag">Deneyim</span>
                         </div>
                     </div>
-                    
-                    <!-- Dinamik Bölüm (Kariyer Hedefleri) -->
-                    <button id="toggleMore" class="btn btn-secondary mt-large">Kariyer Hedefleri ve Detaylar</button>
-                    <div id="moreInfo" style="display: none;">
+
+                    <button id="toggleMore" class="btn btn-secondary mt-large" aria-expanded="false">Kariyer Hedefleri ve Detaylar</button>
+                    <div id="moreInfo" class="more-info hidden">
                         <div class="info-block">
-                            <h3>KARİYER HEDEFLERİM</h3>
-                            <p>Kısa vadeli hedefim, sektördeki en son UI/UX trendlerini takip ederek hem estetik hem de işlevsel açıdan mükemmel web projeleri geliştirmektir. Uzun vadede ise, yaratıcı çözümlerimle teknoloji ve tasarım alanında tanınan bir isim olmayı ve sektöre kalıcı katkılar sağlamayı amaçlıyorum.</p>
+                            <h3>Kariyer Hedeflerim</h3>
+                            <p>Kısa vadede modern web standartlarında, yüksek kullanılabilirliğe sahip arayüzler geliştirmeyi; uzun vadede ise teknoloji ve tasarım kesişiminde güçlü ürünler ortaya koymayı hedefliyorum.</p>
                         </div>
                         <div class="info-block">
-                            <h3>KİŞİSEL DEĞERLERİM VE ÇALIŞMA PRENSİPLERİM</h3>
-                            <p>Kullanıcı odaklı yaklaşım, erişilebilirlik, estetik ve işlevselliği dengeleme benim için temel prensiplerdir. Yenilikçi çözümler üretmeye, zaman yönetimini etkin kullanmaya ve takım çalışmasında aktif rol almaya büyük önem veriyorum. Sürekli öğrenme ve kendini yenileme, bir mühendis olarak en önemli ilkemdir.</p>
+                            <h3>Çalışma Prensiplerim</h3>
+                            <p>Kullanıcı odaklılık, erişilebilirlik, sürdürülebilir kod yapısı ve ekip içinde açık iletişim benim için temel önceliklerdir.</p>
                         </div>
                         <div class="info-block">
-                            <h3>İLGİ ALANLARIM</h3>
-                            <p>Web tasarımı dışında, Grafik Tasarım, Dijital İllüstrasyon gibi yaratıcı alanlarla ilgileniyorum. Bu hobilerim, tasarımda görsel estetiği ve yaratıcı düşünmeyi geliştirmeme yardımcı oluyor. Müzik ve seyahat de yeni kültürleri keşfetmemi sağlayarak projelerime ilham veriyor.</p>
+                            <h3>İlgi Alanlarım</h3>
+                            <p>Web tasarımı dışında grafik tasarım, dijital illüstrasyon, müzik ve seyahat gibi yaratıcı alanlarla ilgileniyorum.</p>
                         </div>
                     </div>
                 </div>
-                
-                <div class="about-sidebar">
-                    <img src="pp.jpg" alt="Hilal Kutlu Profil Resmi" id="profileImageAbout" class="profile-image-circle">
+
+                <aside class="about-sidebar">
+                    <img src="pp.jpg" alt="Hilal Kutlu profil fotoğrafı" id="profileImageAbout" class="profile-image-circle">
                     <div class="contact-card">
                         <h4>İletişim</h4>
                         <p><strong>E-posta:</strong> hilal.kutlu.tr@gmail.com</p>
-                        <a href="cv/hilalkutlu_cv.pdf" target="_blank" class="btn btn-primary mt-large" style="width: 100%;">CV İndir</a>
+                        <a href="cv/hilalkutlu_cv.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary full-width mt-large">CV İndir</a>
                     </div>
-                </div>
+                </aside>
             </div>
         </section>
-        
-        <!-- İletişim Formu Bağlantısı -->
-        <section id="contact-section" class="section-container contact-prompt">
+
+        <section id="contact-section" class="section-container contact-prompt reveal">
             <h2 class="text-center">Bir Projeniz mi Var?</h2>
-            <p class="text-center">Haydi bir kahve içelim ve fikirlerinizi hayata geçirme yollarını konuşalım!</p>
-            <div class="text-center"><a href="index.html#contact-section" class="btn btn-primary">Hemen İletişime Geç</a></div>
+            <p class="text-center">Fikrinizi birlikte ürünleştirelim.</p>
+            <div class="text-center">
+                <a href="index.html#contact-section" class="btn btn-primary">Hemen İletişime Geç</a>
+            </div>
         </section>
     </main>
+
     <footer id="mainFooter"></footer>
 </body>
 </html>

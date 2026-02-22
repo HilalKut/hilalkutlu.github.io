@@ -1,87 +1,148 @@
-// Navigasyon Aktif Link Belirleme
 function setActiveNavLink() {
-    const navLinks = document.querySelectorAll("nav ul li a");
+    const navLinks = document.querySelectorAll(".site-nav a");
     const pathSegments = window.location.pathname.split("/").filter(Boolean);
-    const currentPage = pathSegments.length > 0 ? pathSegments.pop() : "index.html"; 
+    const currentPage = pathSegments.length ? pathSegments[pathSegments.length - 1] : "index.html";
 
-    navLinks.forEach(link => {
-        const linkHref = link.getAttribute('href').split('#')[0]; // Anchor tag'leri dikkate alma
+    navLinks.forEach((link) => {
+        const href = link.getAttribute("href") || "";
 
-        if (linkHref === currentPage || (currentPage === "" && linkHref === "index.html")) {
-            link.classList.add("active"); 
+        if (href.startsWith("#")) {
+            link.classList.remove("active");
+            return;
+        }
+
+        const linkPage = href.split("#")[0];
+        if (linkPage === currentPage || (currentPage === "" && linkPage === "index.html")) {
+            link.classList.add("active");
         } else {
             link.classList.remove("active");
         }
     });
 }
 
-// İletişim Formu İşleyicisi
+function setupMobileMenu() {
+    const menuButton = document.querySelector(".menu-toggle");
+    const nav = document.getElementById("primaryNav");
+
+    if (!menuButton || !nav) {
+        return;
+    }
+
+    menuButton.addEventListener("click", () => {
+        const isOpen = document.body.classList.toggle("menu-open");
+        menuButton.setAttribute("aria-expanded", String(isOpen));
+    });
+
+    nav.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+            document.body.classList.remove("menu-open");
+            menuButton.setAttribute("aria-expanded", "false");
+        });
+    });
+}
+
 function handleFormSubmit(event) {
     event.preventDefault();
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
-    const feedback = document.getElementById('formFeedback');
 
-    // Bu kısım gerçek bir backend/form hizmeti (Formspree, Netlify Forms vb.) ile entegre edilmelidir.
-    if (!name || !email || !message) {
-        feedback.textContent = 'Lütfen tüm alanları doldurun.';
-        feedback.style.color = '#e54d26'; // Vurgu rengiyle hata mesajı
-    } else if (!/\S+@\S+\.\S+/.test(email)) {
-        feedback.textContent = 'Lütfen geçerli bir e-posta girin.';
-        feedback.style.color = '#e54d26';
-    } else {
-        // Başarılı Simülasyon
-        feedback.textContent = 'Mesajınız başarıyla alındı! Teşekkürler.';
-        feedback.style.color = '#192330'; 
-        document.getElementById('contactForm').reset();
+    const form = document.getElementById("contactForm");
+    const name = document.getElementById("name");
+    const email = document.getElementById("email");
+    const message = document.getElementById("message");
+    const feedback = document.getElementById("formFeedback");
+
+    if (!form || !name || !email || !message || !feedback) {
+        return;
     }
+
+    const emailValid = /\S+@\S+\.\S+/.test(email.value.trim());
+
+    if (!name.value.trim() || !email.value.trim() || !message.value.trim()) {
+        feedback.textContent = "Lütfen tüm alanları doldurun.";
+        feedback.style.color = "#b42318";
+        return;
+    }
+
+    if (!emailValid) {
+        feedback.textContent = "Lütfen geçerli bir e-posta adresi girin.";
+        feedback.style.color = "#b42318";
+        return;
+    }
+
+    feedback.textContent = "Mesajınız alındı. En kısa sürede dönüş yapacağım.";
+    feedback.style.color = "#0d4ecf";
+    form.reset();
 }
 
-// Hakkımda Sayfası - Daha Az/Daha Çok Gör Butonu
 function setupToggleMoreButton() {
-    const toggleButton = document.getElementById('toggleMore');
-    const moreInfo = document.getElementById('moreInfo');
+    const toggleButton = document.getElementById("toggleMore");
+    const moreInfo = document.getElementById("moreInfo");
 
-    if (toggleButton && moreInfo) { 
-        toggleButton.addEventListener('click', function() {
-            const isHidden = moreInfo.style.display === "none" || moreInfo.style.display === "";
-            moreInfo.style.display = isHidden ? "block" : "none"; 
-            this.textContent = isHidden ? "Detayları Gizle" : "Kariyer Hedefleri ve Detaylar"; 
-        });
+    if (!toggleButton || !moreInfo) {
+        return;
     }
+
+    toggleButton.addEventListener("click", () => {
+        const isHidden = moreInfo.classList.toggle("hidden");
+        toggleButton.textContent = isHidden ? "Kariyer Hedefleri ve Detaylar" : "Detayları Gizle";
+        toggleButton.setAttribute("aria-expanded", String(!isHidden));
+    });
 }
 
-// Footer'ı Dinamik Olarak Yükleme
 function loadFooter(footerId) {
     const footerElement = document.getElementById(footerId);
-    if (footerElement) {
-        // Yeni footer içeriği: Twitter kaldırıldı, sadece LinkedIn ve GitHub bırakıldı.
-        const footerContent = `
-            <div class="footer-content">
-                <div class="social-links">
-                    <a href="https://www.linkedin.com" target="_blank">LinkedIn</a> |
-                    <a href="https://www.github.com" target="_blank">GitHub</a> 
-                </div>
-                <div class="footer-info">
-                    <p>&copy; ${new Date().getFullYear()} Hilal Kutlu. Tüm hakları saklıdır.</p>
-                    <p>Contact: <a href="mailto:hilal.kutlu.tr@gmail.com">hilal.kutlu.tr@gmail.com</a></p>
-                </div>
-            </div>
-        `;
-        footerElement.innerHTML = footerContent;
-        footerElement.classList.add('footer'); // CSS sınıfını ekle
+
+    if (!footerElement) {
+        return;
     }
+
+    const footerContent = `
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/hilal-kutlu-672376284/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://github.com/hilalkutlu" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+            <div class="footer-info">
+                <p>&copy; ${new Date().getFullYear()} Hilal Kutlu. Tüm hakları saklıdır.</p>
+                <p>İletişim: <a href="mailto:hilal.kutlu.tr@gmail.com">hilal.kutlu.tr@gmail.com</a></p>
+            </div>
+        </div>
+    `;
+
+    footerElement.innerHTML = footerContent;
+    footerElement.classList.add("footer");
 }
 
+function setupRevealAnimations() {
+    const revealItems = document.querySelectorAll(".reveal");
 
-document.addEventListener("DOMContentLoaded", function() {
-    setActiveNavLink(); 
-    loadFooter("mainFooter"); 
+    if (!revealItems.length) {
+        return;
+    }
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("is-visible");
+                    observer.unobserve(entry.target);
+                }
+            });
+        },
+        { threshold: 0.16 }
+    );
+
+    revealItems.forEach((item) => observer.observe(item));
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    setActiveNavLink();
+    setupMobileMenu();
+    loadFooter("mainFooter");
     setupToggleMoreButton();
+    setupRevealAnimations();
 
-    const contactForm = document.getElementById('contactForm');
+    const contactForm = document.getElementById("contactForm");
     if (contactForm) {
-        contactForm.addEventListener('submit', handleFormSubmit);
+        contactForm.addEventListener("submit", handleFormSubmit);
     }
 });

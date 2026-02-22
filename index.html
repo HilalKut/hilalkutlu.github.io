@@ -3,89 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anasayfa | HILAL KUTLU - Yazılım Geliştirici</title>
-    <!-- Google Fonts: Poppins (Başlık) & Inter (Metin) -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <meta name="description" content="Hilal Kutlu'nun yazılım geliştirme, web tasarım ve mühendislik projeleri portfolyosu.">
+    <title>Anasayfa | Hilal Kutlu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
 </head>
-
-<body>
-    <header>
-        <div class="logo">H.K.</div>
-        <nav>
-          <ul>
-            <li><a href="index.html">Anasayfa</a></li>
-            <li><a href="about.html">Hakkımda</a></li>
-            <li><a href="projects.html">Projelerim</a></li>
-            <li><a href="#contact-section" class="cta-nav">İletişim</a></li>
-          </ul>
-        </nav>
+<body class="page-home">
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="index.html" class="logo" aria-label="Hilal Kutlu Anasayfa">H.K.</a>
+            <button class="menu-toggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Menüyü Aç/Kapat">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav id="primaryNav" class="site-nav">
+                <ul>
+                    <li><a href="index.html">Anasayfa</a></li>
+                    <li><a href="about.html">Hakkımda</a></li>
+                    <li><a href="projects.html">Projelerim</a></li>
+                    <li><a href="#contact-section" class="cta-nav">İletişim</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <!-- HERO SECTION: Profesyonel Karşılama ve Hızlı Tanıtım -->
-        <section id="hero-section" class="hero-section">
+        <section id="hero-section" class="hero-section reveal">
             <div class="hero-content">
                 <div class="hero-text">
-                    <h2 class="pre-title">Bilgisayar Mühendisi Adayı</h2>
-                    <h1 class="main-title">Hilal Kutlu: <span class="accent-text">Problem Çözümleri Kodlar.</span></h1>
-                    <p class="subtitle">Kullanıcı odaklı web çözümlerine ve yenilikçi projelere tutkuyla bağlı bir yazılım geliştiricisiyim. Dijital dünyada fark yaratmayı hedefliyorum.</p>
+                    <p class="pre-title">Bilgisayar Mühendisi Adayı</p>
+                    <h1 class="main-title">Hilal Kutlu <span class="accent-text">dijital ürünlerde net, hızlı ve etkili çözümler üretir.</span></h1>
+                    <p class="subtitle">Web teknolojilerini, tasarım bakış açısını ve mühendislik disiplinini bir araya getirerek kullanıcı odaklı projeler geliştiriyorum.</p>
                     <div class="hero-actions">
                         <a href="projects.html" class="btn btn-primary">Projelerimi Gör</a>
-                        <a href="cv/hilalkutlu_cv.pdf" target="_blank" class="btn btn-secondary">CV İndir (PDF)</a> 
+                        <a href="cv/hilalkutlu_cv.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">CV İndir</a>
                     </div>
                 </div>
-                <img src="pp.jpg" alt="Hilal Kutlu Profesyonel Profil Resmi" class="hero-image">
+                <div class="hero-image-wrap">
+                    <img src="pp.jpg" alt="Hilal Kutlu profil fotoğrafı" class="hero-image">
+                </div>
             </div>
         </section>
 
-        <!-- YETENEKLER/STACK BÖLÜMÜ: Hızlı Teknik Özet -->
-        <section id="skills-section" class="section-container">
-            <h2>Kullanılan Teknolojiler</h2>
+        <section id="skills-section" class="section-container reveal">
+            <div class="section-head">
+                <h2>Kullanılan Teknolojiler</h2>
+                <p>Odak alanlarım ve teknik yetkinliklerim.</p>
+            </div>
             <div class="skills-grid">
-                <div class="skill-item" data-level="Uzman">HTML5 & CSS3</div>
+                <div class="skill-item" data-level="Uzman">HTML5 &amp; CSS3</div>
                 <div class="skill-item" data-level="Deneyimli">JavaScript</div>
-                <div class="skill-item" data-level="Temel">Web Tasarımı (UI/UX)</div>
+                <div class="skill-item" data-level="Temel">UI/UX Tasarım</div>
                 <div class="skill-item" data-level="Uzman">Git/GitHub</div>
                 <div class="skill-item" data-level="Deneyimli">Problem Çözme</div>
                 <div class="skill-item" data-level="Uzman">Takım Çalışması</div>
             </div>
         </section>
 
-        <!-- PROJELERE HIZLI BAKIŞ (Sadece 1 Proje) -->
-        <section id="project-glance" class="section-container">
-            <h2>Öne Çıkan Projem</h2>
-            <div class="projects-glance-grid" style="grid-template-columns: 1fr;"> 
-                <div class="project-glance-item">
+        <section id="project-glance" class="section-container reveal">
+            <div class="section-head">
+                <h2>Öne Çıkan Proje</h2>
+                <p>Gerçek dünya problemlerine sürdürülebilir mühendislik yaklaşımı.</p>
+            </div>
+            <div class="projects-glance-grid single-column">
+                <article class="project-glance-item">
+                    <p class="eyebrow">TÜBİTAK 2208A</p>
                     <h3>Uzaktan Kontrol ile Güneş Enerjili Su Arıtma Sistemi</h3>
-                    <p>Sürdürülebilir, yenilenebilir enerjiyle çalışan su arıtma sistemi projesi. **(TÜBİTAK)**</p>
+                    <p>Sürdürülebilir enerji ile çalışan, düşük maliyetli ve erişilebilir bir su arıtma çözümü geliştirdik.</p>
                     <a href="projects.html#proje1" class="project-link">Detayları Gör</a>
-                </div>
+                </article>
             </div>
             <div class="text-center">
                 <a href="projects.html" class="btn btn-secondary mt-large">Tüm Projeleri Görüntüle</a>
             </div>
         </section>
 
-        <!-- İletişim Formu -->
-        <section id="contact-section" class="section-container">
-            <h2>İletişime Geçin</h2>
+        <section id="contact-section" class="section-container reveal">
+            <div class="section-head">
+                <h2>İletişime Geçin</h2>
+                <p>Bir fikir, proje veya iş birliği için bana yazabilirsiniz.</p>
+            </div>
             <form id="contactForm" class="contact-form">
                 <div class="form-group">
-                    <label for="name">İsim:</label>
-                    <input type="text" id="name" name="name" required>
+                    <label for="name">İsim</label>
+                    <input type="text" id="name" name="name" autocomplete="name" required>
                 </div>
                 <div class="form-group">
-                    <label for="email">E-posta:</label>
-                    <input type="email" id="email" name="email" required>
+                    <label for="email">E-posta</label>
+                    <input type="email" id="email" name="email" autocomplete="email" required>
                 </div>
                 <div class="form-group full-width">
-                    <label for="message">Mesajınız:</label>
+                    <label for="message">Mesajınız</label>
                     <textarea id="message" name="message" required></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary full-width">Mesajı Gönder</button>
-                <p id="formFeedback" class="feedback"></p>
+                <p id="formFeedback" class="feedback" aria-live="polite"></p>
             </form>
         </section>
     </main>
